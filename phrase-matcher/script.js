@@ -3,14 +3,7 @@ var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 
 var phrases = [
-  'I love to sing because it\'s fun',
-  'where are you going',
-  'can I call you tomorrow',
-  'why did you talk while I was talking',
-  'she enjoys reading books and playing games',
-  'where are you going',
-  'have a great day',
-  'she sells seashells on the seashore'
+  '안녕하세요'
 ];
 
 var phrasePara = document.querySelector('.phrase');
@@ -41,7 +34,7 @@ function testSpeech() {
   var speechRecognitionList = new SpeechGrammarList();
   speechRecognitionList.addFromString(grammar, 1);
   recognition.grammars = speechRecognitionList;
-  recognition.lang = 'en-US';
+  recognition.lang = 'ko-KR';
   recognition.interimResults = false;
   recognition.maxAlternatives = 1;
 
